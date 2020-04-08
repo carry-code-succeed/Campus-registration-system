@@ -27,9 +27,11 @@ def Stuleave(name,num,time):
     for i in range(0,len(student)):
         if((student[i][1]==name) & (student[i][0]==num)):
             student[i][3]=time
-            return student
+            message='姓名：'+name+' 学号：'+num+' 离开校园时间：'+time1_str
+            return message
         else:
-            return student
+            message="查无此人"
+            return message
 
 def StuNumFind(list,num):
     f = 0     #标记
@@ -135,8 +137,8 @@ class MyFrame(wx.Frame):
         if name == "" or no == "":    # 判断姓名或学号是否为空
             message = '姓名或学号不能为空'
         else:
-            message = '姓名：'+name+' 学号：'+no+' 离开校园时间：'+time1_str   
-            Stuleave(name,no,time1_str)
+#             message = '姓名：'+name+' 学号：'+no+' 离开校园时间：'+time1_str   
+            message=Stuleave(name,no,time1_str)
         wx.MessageBox(message)
         
     def OnclickXianshi(self, event):
