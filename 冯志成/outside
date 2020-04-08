@@ -1,8 +1,7 @@
-import datetime
 def Stuleave(name,num)：
     for i in range(0,len(student))：
-        if((student[i]['name']==name) & (student[i]['Stunum']==num))：
-             student[i]['leaveTime']=datetime.datetime.now().strftime('%Y-%m-%d')
+        if((student[i][1]==name) & (student[i][0]==num))：
+             student[i][3]=datetime.datetime.now().strftime('%Y-%m-%d')
              return student
         else:
              return student
