@@ -1,1 +1,6 @@
-student[0]['Stunum']
+N=10
+def chazhao(student):
+    global N
+    for i in range(0,N):
+        if(student[i][0]['Stunum']=='1')
+    print student[i][0]['Stunum']
