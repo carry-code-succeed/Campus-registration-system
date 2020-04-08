@@ -1,7 +1,9 @@
-def Stuleave(name,num)：
-    for i in range(0,len(student))：
-        if((student[i][1]==name) & (student[i][0]==num))：
-             student[i][3]=datetime.datetime.now().strftime('%Y-%m-%d')
-             return student
+def Stuleave(name,num,time):
+    for i in range(0,len(student)):
+        if((student[i][1]==name) & (student[i][0]==num)):
+            student[i][3]=time
+            message='姓名：'+name+' 学号：'+num+' 离开校园时间：'+time1_str
+            return message
         else:
-             return student
+            message="查无此人"
+            return message
