@@ -5,7 +5,7 @@ import datetime
 
 class MyFrame(wx.Frame):
     def __init__(self,  parent,  id):
-        wx.Frame.__init__(self,  parent,  id,  '用户登录',  size=(400,  300))
+        wx.Frame.__init__(self,  parent,  id,  '校园进出登记',  size=(400,  300))
         # 创建面板
         panel = wx.Panel(self)
 
