@@ -1,6 +1,8 @@
-N=10
-def chazhao(student):
-    global N
-    for i in range(0,N):
-        if(student[i][0]['Stunum']=='1')
-    print student[i][0]['Stunum']
+import datetime
+def Stuleave(name,num)：
+    for i in range(0,len(student))：
+        if((student[i]['name']==name) & (student[i]['Stunum']==num))：
+             student[i]['leaveTime']=datetime.datetime.now().strftime('%Y-%m-%d')
+             return student
+        else:
+             return student
