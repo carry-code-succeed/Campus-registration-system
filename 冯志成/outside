@@ -1,3 +1,4 @@
+import datetime
 def Stuleave(name,num)：
     for i in range(0,len(student))：
         if((student[i]['name']==name) & (student[i]['Stunum']==num))：
