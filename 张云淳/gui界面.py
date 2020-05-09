@@ -16,7 +16,7 @@ class MyFrame(wx.Frame):
         self.bt_cancel.Bind(wx.EVT_BUTTON, self.OnclickCancel)
         self.bt_xianshi = wx.Button(panel,  label='显示信息')
         self.bt_xianshi.Bind(wx.EVT_BUTTON, self.OnclickXianshi)
-        # 创建文本，左对齐        
+        # 创建文本，左对齐
         self.title = wx.StaticText(panel,  label="请输入姓名和学号")
         self.label_user = wx.StaticText(panel,  label="姓名:")
         self.text_user = wx.TextCtrl(panel,  style=wx.TE_LEFT)
@@ -35,7 +35,7 @@ class MyFrame(wx.Frame):
         hsizer_button.Add(self.bt_xianshi,  proportion=0,  flag=wx.ALIGN_CENTER,  border=5)
         # 添加容器，容器中控件按纵向并排排列
         vsizer_all = wx.BoxSizer(wx.VERTICAL)
-        vsizer_all.Add(self.title,  proportion=0,  flag=wx.BOTTOM | wx.TOP | wx.ALIGN_CENTER, 
+        vsizer_all.Add(self.title,  proportion=0,  flag=wx.BOTTOM | wx.TOP | wx.ALIGN_CENTER,
                         border=15)
         vsizer_all.Add(hsizer_user,  proportion=0,  flag=wx.EXPAND | wx.LEFT | wx.RIGHT,  border=45)
         vsizer_all.Add(hsizer_pwd,  proportion=0,  flag=wx.EXPAND | wx.LEFT | wx.RIGHT,  border=45)
@@ -52,11 +52,11 @@ class MyFrame(wx.Frame):
         if name == "" or no == "":    # 判断姓名或学号是否为空
             message = '姓名或学号不能为空'
         else:
-            message = '姓名：'+name+' 学号：'+no+' 进入校园时间：'+time1_str           
-            
-        wx.MessageBox(message)                        # 弹出提示框          
+            message = '姓名：'+name+' 学号：'+no+' 进入校园时间：'+time1_str
 
-    def OnclickCancel(self, event):  
+        wx.MessageBox(message)                        # 弹出提示框
+
+    def OnclickCancel(self, event):
         """ 点击离开校园按钮，执行方法 """
         message = ""
         name = self.text_user.GetValue()     # 获取输入的姓名
@@ -66,16 +66,16 @@ class MyFrame(wx.Frame):
         if name == "" or no == "":    # 判断姓名或学号是否为空
             message = '姓名或学号不能为空'
         else:
-            message = '姓名：'+name+' 学号：'+no+' 离开校园时间：'+time1_str   
-        
+            message = '姓名：'+name+' 学号：'+no+' 离开校园时间：'+time1_str
+
         wx.MessageBox(message)
-        
+
     def OnclickXianshi(self, event):
             message = ""
             wx.MessageBox(message)
-        
+
 if __name__ == '__main__':
     app = wx.App()                      # 初始化
-    frame = MyFrame(parent=None, id=-1)  # 实例MyFrame类，并传递参数    
+    frame = MyFrame(parent=None, id=-1)  # 实例MyFrame类，并传递参数
     frame.Show()                        # 显示窗口
     app.MainLoop()                      # 调用主循环方法
